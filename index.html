@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="js/guessing-game.js"></script>
+  </head>
+
+  <body>
+    <article>
+      <h1>The Tale of Io</h1>
+
+      <section class="mainTextAndImg">
+        <blockquote>
+          <p>
+            This is an abriged version of the Greek myth of Io. Long ago, Zeus
+            had yet again grown restless and searched the earth for another love
+            of his life. He found Io, a beautiful maiden working in the fields.
+            Zeus flew down to meet with Io and created an enormous storm cloud
+            in an attempt to obscure them from his wife, Hera. However, Hera
+            knew when to be suspicious of her huzband and flew down to punish
+            him. Zeus had just enough time to transform Io into a cow as white
+            as snow in order to protect her from Hera's wrath. When Hera
+            arrived, she could tell that Io was a transformed human; she cajoled
+            Zeus to give her the cow as a present. Once alone with the cow, Hera
+            set her servant, the giant named Argus Panoptes, to guard Io and
+            prevent Zeus from retrieving her. Argus was perfect for the task -
+            his entire body was covered in 100 eyes! By rotating which eyes were
+            "sleeping" (closed), the giant could keep watch from every angle at
+            all times.
+          </p>
+
+          <p>
+            Zeus was in a pickle. In desperation, he reached out to Hermes for
+            help, who was happy to assist. To succeed, Hermes planned to
+            approach Argus while disguised as a shephard. He brought his
+            panpipes with him so that he could put the giant to sleep with its
+            music. The next day, Hermes approached Argus the giant...
+          </p>
+
+          <h4>
+            Hermes must lull all 100 of the giant's eyes to sleep with his
+            music. How many of Argus' eyes were open when Hermes arrived?
+          </h4>
+        </blockquote>
+
+        <img
+          src="https://www.greekmythology.com/images/mythology/argus_panoptes_110.jpg"
+        />
+      </section>
+    </article>
+
+    <section class="bottomSection">
+      <!-- input space and button -->
+      <form class="guess">
+        <input id="guessedNumber" type="number" placeholder="Guess!" />
+        <button id="submitButton">Submit</button>
+        <button id="hintButton">Hint</button>
+      </form>
+
+      <!-- "Nearness to the target number" phrases; only show one and only when guess has been made -->
+      <label id="tempPhrases">
+        <h2 id="id1">Ice cold.</h2>
+        <h2 id="id2">Getting warmer...</h2>
+        <h2 id="id3">Much hotter now...</h2>
+        <h2 id="id4">You're positively blazing hot!</h2>
+        <h2 id="id5">
+          YOU GOT IT!!! Io is saved! Refresh the page to play again.
+        </h2>
+        <h2 id="id6">
+          Oh no, Hermes wasn't able to put all the eyes to sleep! Io is doomed!
+          Refresh the page to try again.
+        </h2>
+      </label>
+
+      <!-- this will appear only if the hint button is pressed; the hint's values will be +3 and -3 of the target number-->
+      <p id="hint"></p>
+
+      <!-- Numbers guessed so far; only show list when guesses are made, up to 5 max -->
+      <label id="savedGuesses"></label>
+    </section>
+  </body>
+</html>

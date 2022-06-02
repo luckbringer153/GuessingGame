@@ -1,0 +1,133 @@
+/* Write your CSS code in this file */
+/*use responsive styling (Flexbox or Grid) and media queries*/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Arial";
+  box-sizing: border-box;
+}
+
+body {
+  background-color: tan;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  /* center block in center of webpage */
+  max-width: 90%;
+  align-items: center;
+  border: rgb(105, 83, 53) dotted 5px;
+}
+
+article {
+  /*includes title, all text, and image)*/
+  background-color: rgb(248, 235, 218);
+  padding: 10px;
+  /* border:black dashed 1px; */
+}
+
+.mainTextAndImg {
+  display: flex;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+p {
+  margin: 20px;
+}
+
+h4 {
+  margin: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+img {
+  border: rgb(105, 83, 53) solid 10px;
+  width: 200px;
+  height: auto;
+  transform: scaleX(-1);
+  margin-right: 10px;
+}
+
+.bottomSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: rgb(47, 15, 107);
+  align-items: center;
+  padding: 10px;
+  background-image: url(https://media.istockphoto.com/photos/old-stained-paper-texture-picture-id949108436?b=1&k=20&m=949108436&s=170667a&w=0&h=Wrq36wHg3P_P8przOo2vWePyq4NleoyOx9bCkoJBclU=);
+  background-color: rgb(
+    196,
+    155,
+    102
+  ); /*will be used instead if pic is unavailable*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#id1,
+#id2,
+#id3,
+#id4,
+#id5,
+#id6,
+#hint {
+  /*may need to change tempPhrases to be all six id numbers specifically*/
+  visibility: hidden; /*only show when conditiions have been met*/
+}
+
+.guess {
+  height: 40px;
+  width: 450px;
+  display: flex;
+  border: none;
+  padding: 5px;
+}
+
+button {
+  background-color: rgb(47, 15, 107);
+  color: white;
+  border: none;
+  width: 50px;
+  border: tan 2px outset;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  border: tan 2px inset;
+}
+
+#savedGuesses {
+  flex-direction: row;
+  font-size: 35px;
+  padding: 10px;
+}
+
+/* underline most recent guess */
+#savedGuesses :last-child {
+  border-bottom: solid rgb(47, 15, 107) 5px;
+}
+
+/* mobile mode */
+@media screen and (max-width: 800px) {
+  img {
+    display: none;
+  }
+
+  .bottomSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guess {
+    margin-top: 10px;
+  }
+}
